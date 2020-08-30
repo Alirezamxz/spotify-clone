@@ -3,6 +3,9 @@ import './App.css'
 import Login from './components/Login/Login'
 import Player from './components/Player/Player'
 import { getTokenFromUrl } from './spotify'
+import SpotifyWebApi from 'spotify-web-api-js'
+
+const spotify = new SpotifyWebApi()
 
 function App() {
 
@@ -14,6 +17,7 @@ function App() {
     const _token = hash.access_token
     if (_token) {
       setToken(_token)
+      spotify.setAccessToken(_token)
     }
   } ,[])
 
@@ -27,5 +31,3 @@ function App() {
 }
 
 export default App;
-
-// https://youtu.be/pnkuI8KXW_8?t=4819
