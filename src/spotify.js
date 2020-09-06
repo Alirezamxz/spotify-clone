@@ -3,7 +3,7 @@ export const authEndpoint = "https://accounts.spotify.com/authorize"
 // redirect to home page after login
 const redirectUri = "http://localhost:3000/"
 // get your client ID from this link => https://developer.spotify.com
-const clientId = "046565466c57464582a4f7e843e6b8ff"
+const clientId = "YOUR_CLIENT_ID"
 // access to user data like currently playing
 const scopes = [
     "user-read-currently-playing",
